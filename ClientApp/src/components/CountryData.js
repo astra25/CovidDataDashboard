@@ -44,7 +44,7 @@ export class CountryData extends Component {
                         <CartesianGrid stroke="#f5f5f5" />
                         <Tooltip />
                         <Bar dataKey="newCases" barSize={20} fill="#413ea0" />
-                        <Line dataKey="newCases" type="monotone" stroke="#ff7300" />
+                        <Line dataKey="newCasesAverage" type="monotone" stroke="#ff7300" />
                     </ComposedChart>
                 </div>
             </div>

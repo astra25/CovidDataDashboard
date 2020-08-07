@@ -17,6 +17,7 @@ namespace CovidDataDashboard.Models
         public DateTime Date { get; set; }
         public double TotalCases { get; set; }
         public double NewCases { get; set; }
+        public double NewCasesAverage { get; set; }
         public double TotalDeaths { get; set; }
         public double NewDeaths { get; set; }
         public double TotalCasesPerMillion { get; set; }

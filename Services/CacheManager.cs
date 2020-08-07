@@ -48,6 +48,14 @@ namespace CovidDataDashboard.Services
 
             foreach (var item in dictionary)
             {
+                var countryData = item.Value.Data.ToList();
+
+                for (int i = 0; i < countryData.Count; i++)
+                {
+                    var countryItem = countryData[i];
+                    countryItem.NewCasesAverage = countryData.Skip(i - 6).Take(7).Average(x => x.NewCases);
+                }
+
                 _cache.Set(item.Key, item.Value);
 
                 var continentName = item.Value.Continent;
